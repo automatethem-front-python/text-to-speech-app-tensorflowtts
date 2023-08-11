@@ -12,6 +12,17 @@ conda activate text-to-speech-app-tensorflowtts
 
 conda install --file requirements_conda.txt -y
 pip install -r requirements.txt
+
+#    from tensorflow.compat.v2.experimental import dtensor as dtensor_api
+#ImportError: cannot import name 'dtensor' from 'tensorflow.compat.v2.experimental' (C:\ProgramData\Anaconda3\envs\text-to-speech-app-tensorflowtts\lib\site-packages\tensorflow\_api\v2\compat\v2\experimental\__init__.py)
+#tensorflow와 keras 버전 비호환으로 생기는 에러
+#https://velog.io/@linky1584/ImportError-cannot-import-name-dtensor-from-tensorflow.compat.v2.experimental
+pip uninstall keras
+pip install keras==2.6
+```
+
+```
+python predict.py
 ```
 
 ===========
