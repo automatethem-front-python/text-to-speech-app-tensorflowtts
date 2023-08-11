@@ -1,0 +1,2 @@
+#conda install --file requirements_conda.txt -y -c hcc
+tensorflow==2.6.0
