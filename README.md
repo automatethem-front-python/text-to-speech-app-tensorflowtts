@@ -1,6 +1,12 @@
 # text-to-speech-app-tensorflowtts
 
-https://pypi.org/project/TensorFlowTTS/
+https://pypi.org/project/TensorFlowTTS/  
+https://github.com/TensorSpeech/TensorFlowTTS/blob/master/setup.py
+```
+requirements = {
+    "install": [
+        #"tensorflow-gpu==2.7.0",
+```
 
 https://anaconda.org/hcc/tensorflow
 
