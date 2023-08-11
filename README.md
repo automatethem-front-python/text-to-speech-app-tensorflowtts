@@ -2,6 +2,10 @@
 
 https://pypi.org/project/TensorFlowTTS/  
 
+git  
+Download for Windows  
+https://git-scm.com/download/win
+
 ```
 conda create -n text-to-speech-app-tensorflowtts python=3.7.16
 conda activate text-to-speech-app-tensorflowtts
