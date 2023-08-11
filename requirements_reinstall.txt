@@ -3,4 +3,4 @@
 #ImportError: cannot import name 'dtensor' from 'tensorflow.compat.v2.experimental'
 #tensorflow and keras version incompatible error
 #https://velog.io/@linky1584/ImportError-cannot-import-name-dtensor-from-tensorflow.compat.v2.experimental
-keras==2.7.0
+keras==2.6.0
