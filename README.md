@@ -2,6 +2,9 @@
 
 https://pypi.org/project/TensorFlowTTS/  
 
+models  
+https://huggingface.co/tensorspeech
+
 git  
 Download for Windows  
 https://git-scm.com/download/win
