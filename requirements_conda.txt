@@ -1,2 +1,2 @@
 #conda install --file requirements_conda.txt -y
-tensorflow==2.3
+tensorflow==2.6.0
