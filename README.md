@@ -22,6 +22,12 @@ pip install -r requirements_reinstall.txt --upgrade --force-reinstall
 python predict.py
 ```
 
+참고 자료)
+
+You’re able to add commas that will add a “natural pause” in the speech.  
+https://towardsdatascience.com/text-to-speech-lifelike-speech-synthesis-demo-part-1-f991ffe9e41e
+
+
 ===========
 
 https://github.com/tensorflow/tensorflow/issues/60243
