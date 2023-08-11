@@ -1,6 +1,11 @@
 # text-to-speech-app-tensorflowtts
 
 https://pypi.org/project/TensorFlowTTS/  
+https://github.com/tensorflow/tensorflow/issues/60243
+```
+I had the same problem with python 3.11 on OS X. I don't think I have a GPU. I commented out the tensorflow-gpu lines in requirements.txt, and everything installed.
+Now maybe nothing will work well without a GPU, we'll see
+```
 https://github.com/TensorSpeech/TensorFlowTTS/blob/master/setup.py
 ```
 requirements = {
