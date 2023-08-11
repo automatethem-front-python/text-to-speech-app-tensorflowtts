@@ -1,2 +1,3 @@
 #conda install --file requirements_conda_pytorch.txt -y
+tensorflow-addons==0.10.0
 tensorflow==2.6.0
