@@ -2,6 +2,8 @@
 
 https://pypi.org/project/TensorFlowTTS/
 
+https://anaconda.org/hcc/tensorflow
+
 ```
 conda create -n text-to-speech-app-tensorflowtts python=3.8.11
 conda activate text-to-speech-app-tensorflowtts
