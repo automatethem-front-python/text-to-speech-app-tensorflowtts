@@ -7,6 +7,11 @@ requirements = {
     "install": [
         #"tensorflow-gpu==2.7.0",
 ```
+```
+git clone https://github.com/TensorSpeech/TensorFlowTTS
+cd TensorFlowTTS
+pip install .
+```
 
 https://anaconda.org/hcc/tensorflow
 
