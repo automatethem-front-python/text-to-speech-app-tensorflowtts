@@ -21,7 +21,7 @@ pip install .
 https://anaconda.org/hcc/tensorflow
 
 ```
-conda create -n text-to-speech-app-tensorflowtts python=3.8.11
+conda create -n text-to-speech-app-tensorflowtts python=3.7.16
 conda activate text-to-speech-app-tensorflowtts
 
 conda install --file requirements_conda.txt -y
