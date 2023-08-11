@@ -15,6 +15,7 @@ conda activate text-to-speech-app-tensorflowtts
 
 conda install --file requirements_conda.txt -y
 pip install -r requirements.txt
+pip install -r requirements_reinstall.txt --upgrade --force-reinstall
 
 #    from tensorflow.compat.v2.experimental import dtensor as dtensor_api
 #ImportError: cannot import name 'dtensor' from 'tensorflow.compat.v2.experimental' (C:\ProgramData\Anaconda3\envs\text-to-speech-app-tensorflowtts\lib\site-packages\tensorflow\_api\v2\compat\v2\experimental\__init__.py)
