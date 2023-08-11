@@ -1,0 +1,2 @@
+#pip install -r requirements_reinstall.txt --upgrade --force-reinstall
+keras==2.7.0
