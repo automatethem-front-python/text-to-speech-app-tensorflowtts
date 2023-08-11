@@ -8,17 +8,21 @@ from tensorflow_tts.inference import TFAutoModel
 from tensorflow_tts.inference import AutoProcessor
 
 # initialize fastspeech2 model.
-fastspeech2 = TFAutoModel.from_pretrained("tensorspeech/tts-fastspeech2-ljspeech-en")
+#fastspeech2 = TFAutoModel.from_pretrained("tensorspeech/tts-fastspeech2-ljspeech-en   tensorspeech/tts-fastspeech2-kss-ko")
+fastspeech2 = TFAutoModel.from_pretrained("tensorspeech/tts-fastspeech2-kss-ko")
 
 
 # initialize mb_melgan model
-mb_melgan = TFAutoModel.from_pretrained("tensorspeech/tts-mb_melgan-ljspeech-en")
+#mb_melgan = TFAutoModel.from_pretrained("tensorspeech/tts-mb_melgan-ljspeech-en   tensorspeech/tts-mb_melgan-kss-ko")
+mb_melgan = TFAutoModel.from_pretrained("tensorspeech/tts-mb_melgan-kss-ko")
 
 
 # inference
-processor = AutoProcessor.from_pretrained("tensorspeech/tts-fastspeech2-ljspeech-en")
+#processor = AutoProcessor.from_pretrained("tensorspeech/tts-fastspeech2-ljspeech-en   tensorspeech/tts-fastspeech2-kss-ko")
+processor = AutoProcessor.from_pretrained("tensorspeech/tts-fastspeech2-kss-ko")
 
-input_ids = processor.text_to_sequence("Recent research at Harvard has shown meditating for as little as 8 weeks, can actually increase the grey matter in the parts of the brain responsible for emotional regulation, and learning.")
+#input_ids = processor.text_to_sequence("Recent research at Harvard has shown meditating for as little as 8 weeks, can actually increase the grey matter in the parts of the brain responsible for emotional regulation, and learning.")
+input_ids = processor.text_to_sequence("테스트 테스트입니다.")
 # fastspeech inference
 
 mel_before, mel_after, duration_outputs, _, _ = fastspeech2.inference(
