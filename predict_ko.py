@@ -22,7 +22,7 @@ mb_melgan = TFAutoModel.from_pretrained("tensorspeech/tts-mb_melgan-kss-ko")
 processor = AutoProcessor.from_pretrained("tensorspeech/tts-fastspeech2-kss-ko")
 
 #input_ids = processor.text_to_sequence("Recent research at Harvard has shown meditating for as little as 8 weeks, can actually increase the grey matter in the parts of the brain responsible for emotional regulation, and learning.")
-input_ids = processor.text_to_sequence("테스트 테스트입니다.")
+input_ids = processor.text_to_sequence("안녕하세요. 테스트입니다.")
 # fastspeech inference
 
 mel_before, mel_after, duration_outputs, _, _ = fastspeech2.inference(
