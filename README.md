@@ -55,7 +55,9 @@ https://anaconda.org/hcc/tensorflow
 ======
 
 ```
-conda config --env --set subdir osx-64
+conda config --env --set subdir osx-arm64
+#conda config --env --set subdir osx-64
+
 ```
 ```
 conda create -n text-to-speech-app-tensorflowtts python=3.8.17
