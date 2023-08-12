@@ -51,3 +51,25 @@ pip install .
 ```
 
 https://anaconda.org/hcc/tensorflow
+
+======
+
+```
+conda create -n text-to-speech-app-tensorflowtts python=3.8.17
+conda activate text-to-speech-app-tensorflowtts
+
+#conda install --file requirements_conda.txt -y
+TensorFlow Dependencies 설치
+#For TensorFlow v2.6 
+conda install -c apple tensorflow-deps==2.6.0
+#TensorFlow & Plugin 설치
+python -m pip install tensorflow-macos
+python -m pip install tensorflow-metal
+
+pip install -r requirements.txt
+pip install -r requirements_reinstall.txt --upgrade --force-reinstall
+```
+
+```
+python predict.py
+```
