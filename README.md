@@ -7,6 +7,8 @@ https://huggingface.co/tensorspeech
 
 ## 윈도우
 
+pause1s = AudioSegment.from_mp3("predict_inputs/pause_05second.mp3")  
+FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다    
 압푹 풀어 bin 폴더내 실행 파일을 복사해보기  
 https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip  
 https://ffmpeg.org/download.html  
