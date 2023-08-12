@@ -10,6 +10,7 @@ Download for Windows
 https://git-scm.com/download/win
 
 ```
+conda config --env --set subdir osx-64
 conda create -n text-to-speech-app-tensorflowtts python=3.7.16
 conda activate text-to-speech-app-tensorflowtts
 
