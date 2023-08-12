@@ -66,11 +66,12 @@ conda activate text-to-speech-app-tensorflowtts
 #conda install --file requirements_conda.txt -y
 #TensorFlow Dependencies 설치
 #For TensorFlow v2.6 
-conda install -c apple tensorflow-deps==2.6.0
+#conda install -c apple tensorflow-deps==2.6.0
+conda install -c apple tensorflow-deps
 #TensorFlow & Plugin 설치
 #python -m pip install tensorflow-macos
 #python -m pip install tensorflow-metal
-pip install tensorflow-macos
+#pip install tensorflow-macos
 pip install tensorflow-metal
 
 pip install -r requirements.txt
@@ -87,4 +88,22 @@ python predict.py
 python -m pip install tensorflow
 python -m pip install tensorflow-macos
 python -m pip install tensorflow-metal
+```
+
+=====
+
+```
+##conda config --env --set subdir osx-64
+```
+```
+conda create -n text-to-speech-app-tensorflowtts python=3.7.16
+conda activate text-to-speech-app-tensorflowtts
+
+conda install --file requirements_conda.txt -y
+pip install -r requirements.txt
+pip install -r requirements_reinstall.txt --upgrade --force-reinstall
+```
+
+```
+python predict.py
 ```
