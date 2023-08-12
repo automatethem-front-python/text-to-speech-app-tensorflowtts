@@ -32,6 +32,7 @@ def text_to_speech(text, save_file):
     #sf.write('./audio_after.wav', audio_after, 22050, "PCM_16")
     sf.write(save_file, audio_after, 22050, "PCM_16")
 
-text = "Recent research at Harvard has shown meditating for as little as 8 weeks, can actually increase the grey matter in the parts of the brain responsible for emotional regulation, and learning."
-save_file = './audio_after.wav'
-text_to_speech(text, save_file)
+if __name__ == "__main__":
+    text = "Recent research at Harvard has shown meditating for as little as 8 weeks, can actually increase the grey matter in the parts of the brain responsible for emotional regulation, and learning."
+    save_file = './audio_after.wav'
+    text_to_speech(text, save_file)
