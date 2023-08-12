@@ -12,7 +12,7 @@ mb_melgan = TFAutoModel.from_pretrained("tensorspeech/tts-mb_melgan-ljspeech-en"
 # inference
 processor = AutoProcessor.from_pretrained("tensorspeech/tts-fastspeech2-ljspeech-en")
 
-def text_to_speech(text):
+def text_to_speech(text, save_file):
     input_ids = processor.text_to_sequence(text)
 
     # fastspeech inference
@@ -28,8 +28,9 @@ def text_to_speech(text):
     audio_after = mb_melgan.inference(mel_after)[0, :, 0]
     
     # save to file
-    sf.write('./audio_before.wav', audio_before, 22050, "PCM_16")
-    sf.write('./audio_after.wav', audio_after, 22050, "PCM_16")
+    #sf.write('./audio_before.wav', audio_before, 22050, "PCM_16")
+    #sf.write('./audio_after.wav', audio_after, 22050, "PCM_16")
+sf.write(save_file, audio_after, 22050, "PCM_16")
 
 text = "Recent research at Harvard has shown meditating for as little as 8 weeks, can actually increase the grey matter in the parts of the brain responsible for emotional regulation, and learning."
-text_to_speech(text)
+text_to_speech(text, save_file)
