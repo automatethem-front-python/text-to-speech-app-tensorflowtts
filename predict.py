@@ -1,4 +1,4 @@
-import numpy as np
+﻿import numpy as np
 import soundfile as sf
 import yaml
 import tensorflow as tf
@@ -51,16 +51,31 @@ def text_to_speech(text, save_file):
 def test_to_speech_break(text, save_file):
     #contents = "Hello with <break><break> 1 seconds pause"
     parts = text.split("<break>") # I have chosen this symbol for the pause.
-    pause1s = AudioSegment.from_mp3("predict_inputs/pause_1second.mp3") 
+    #print(parts)
+    temp = []
+    for i, part in enumerate(parts): 
+        part = part.strip()
+        if part:
+            temp.append(part)
+        if i != len(parts) - 1:
+            temp.append("<break>")
+    parts = temp
+    #print(parts)
+    pause1s = AudioSegment.from_mp3("predict_inputs/pause_05second.mp3") 
     cnt = 0
     combined = AudioSegment.empty()
-    for p in parts:
+    for part in parts:
         # The pause will happen for the empty element of the list
-        if not p:
+        if not part:
+            #print("1:", part)
+            pass
+        if part == "<break>":
+            #print("2:", part)
             combined += pause1s
         else:
+            #print("3:", part)
             tmpFileName = "predict_inputs/tmp"+str(cnt)+".wav"
-            text_to_speech(p, tmpFileName)
+            text_to_speech(part, tmpFileName)
             combined+=AudioSegment.from_mp3(tmpFileName) 
         cnt+=1     
     combined.export(save_file, format="mp3") 
