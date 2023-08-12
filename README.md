@@ -78,3 +78,11 @@ pip install -r requirements_reinstall.txt --upgrade --force-reinstall
 ```
 python predict.py
 ```
+
+======
+
+```
+python -m pip install tensorflow
+python -m pip install tensorflow-macos
+python -m pip install tensorflow-metal
+```
