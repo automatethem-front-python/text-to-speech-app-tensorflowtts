@@ -4,17 +4,26 @@ import yaml
 import tensorflow as tf
 from tensorflow_tts.inference import TFAutoModel
 from tensorflow_tts.inference import AutoProcessor
-
 import python_supporter
 import random
 from pydub import AudioSegment
 
+'''
+# initialize fastspeech2 model.
+fastspeech2 = TFAutoModel.from_pretrained("tensorspeech/tts-fastspeech2-ljspeech-en")
+# initialize mb_melgan model
+mb_melgan = TFAutoModel.from_pretrained("tensorspeech/tts-mb_melgan-ljspeech-en")
+# inference
+processor = AutoProcessor.from_pretrained("tensorspeech/tts-fastspeech2-ljspeech-en")
+'''
+#'''
 # initialize fastspeech2 model.
 fastspeech2 = TFAutoModel.from_pretrained("tensorspeech/tts-fastspeech2-kss-ko")
 # initialize mb_melgan model
 mb_melgan = TFAutoModel.from_pretrained("tensorspeech/tts-mb_melgan-kss-ko")
 # inference
 processor = AutoProcessor.from_pretrained("tensorspeech/tts-fastspeech2-kss-ko")
+#'''
 
 def text_to_speech(text, save_file):
     input_ids = processor.text_to_sequence(text)
