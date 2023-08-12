@@ -7,3 +7,5 @@ call activate.bat
 ::call conda activate virtualenv
 call conda activate text-to-speech-app-tensorflowtts
 python predict.py
+echo Close this window.
+pause
