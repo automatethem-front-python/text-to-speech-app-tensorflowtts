@@ -23,7 +23,6 @@ mel_before, mel_after, duration_outputs, _, _ = fastspeech2.inference(
     f0_ratios =tf.convert_to_tensor([1.0], dtype=tf.float32),
     energy_ratios =tf.convert_to_tensor([1.0], dtype=tf.float32),
 )
-
 # melgan inference
 audio_before = mb_melgan.inference(mel_before)[0, :, 0]
 audio_after = mb_melgan.inference(mel_after)[0, :, 0]
