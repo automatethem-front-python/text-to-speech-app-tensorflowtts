@@ -12,7 +12,7 @@ mb_melgan = TFAutoModel.from_pretrained("tensorspeech/tts-mb_melgan-kss-ko")
 # inference
 processor = AutoProcessor.from_pretrained("tensorspeech/tts-fastspeech2-kss-ko")
 
-def text_to_speech(text):
+def text_to_speech(text, save_file):
     input_ids = processor.text_to_sequence(text)
 
     # fastspeech inference
@@ -28,8 +28,10 @@ def text_to_speech(text):
     audio_after = mb_melgan.inference(mel_after)[0, :, 0]
     
     # save to file
-    sf.write('./audio_before.wav', audio_before, 22050, "PCM_16")
-    sf.write('./audio_after.wav', audio_after, 22050, "PCM_16")
+    #sf.write('./audio_before.wav', audio_before, 22050, "PCM_16")
+    #sf.write('./audio_after.wav', audio_after, 22050, "PCM_16")
+    sf.write(save_file, audio_after, 22050, "PCM_16")
  
 text = "안녕하세요. 테스트입니다."
-text_to_speech(text)
+save_file = './audio_after.wav'
+text_to_speech(text, save_file)
