@@ -1,4 +1,4 @@
-#conda install --file requirements_conda_pytorch.txt -y
+#conda install --file requirements_conda_pytorch.txt -y -c esri
 #Python Op Compatility
 #https://github.com/tensorflow/addons#python-op-compatibility-matrix
-tensorflow-addons==0.15.0 -c esri
+tensorflow-addons==0.15.0
