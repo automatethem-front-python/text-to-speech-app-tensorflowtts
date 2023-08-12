@@ -9,7 +9,6 @@ from tensorflow_tts.inference import AutoProcessor
 fastspeech2 = TFAutoModel.from_pretrained("tensorspeech/tts-fastspeech2-kss-ko")
 # initialize mb_melgan model
 mb_melgan = TFAutoModel.from_pretrained("tensorspeech/tts-mb_melgan-kss-ko")
-
 # inference
 processor = AutoProcessor.from_pretrained("tensorspeech/tts-fastspeech2-kss-ko")
 
