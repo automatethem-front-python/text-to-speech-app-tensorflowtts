@@ -8,6 +8,9 @@ import python_supporter
 import random
 from pydub import AudioSegment
 
+import nltk
+nltk.download('punkt')
+
 '''
 # initialize fastspeech2 model.
 fastspeech2 = TFAutoModel.from_pretrained("tensorspeech/tts-fastspeech2-ljspeech-en")
