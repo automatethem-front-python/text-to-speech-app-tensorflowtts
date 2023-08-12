@@ -31,7 +31,8 @@ def text_to_speech(text, save_file):
     #sf.write('./audio_before.wav', audio_before, 22050, "PCM_16")
     #sf.write('./audio_after.wav', audio_after, 22050, "PCM_16")
     sf.write(save_file, audio_after, 22050, "PCM_16")
- 
-text = "안녕하세요. 테스트입니다."
-save_file = './audio_after.wav'
-text_to_speech(text, save_file)
+
+if __name__ == "__main__":
+    text = "안녕하세요. 테스트입니다."
+    save_file = './audio_after.wav'
+    text_to_speech(text, save_file)
