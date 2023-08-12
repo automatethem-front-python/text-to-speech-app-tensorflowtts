@@ -7,6 +7,17 @@ https://huggingface.co/tensorspeech
 
 ## 윈도우
 
+압푹 풀어 bin 폴더내 실행 파일을 복사해보기  
+https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip  
+https://ffmpeg.org/download.html  
+https://stackoverflow.com/questions/68247327/cannot-find-a-solution-to-winerror-2-file-not-found-by-audiosegment-from-mp3
+
+```
+ffmpeg
+ffplay
+ffprobe
+```
+
 git  
 Download for Windows  
 https://git-scm.com/download/win
