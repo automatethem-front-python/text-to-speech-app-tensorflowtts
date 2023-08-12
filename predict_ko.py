@@ -5,6 +5,10 @@ import tensorflow as tf
 from tensorflow_tts.inference import TFAutoModel
 from tensorflow_tts.inference import AutoProcessor
 
+import python_supporter
+import random
+from pydub import AudioSegment
+
 # initialize fastspeech2 model.
 fastspeech2 = TFAutoModel.from_pretrained("tensorspeech/tts-fastspeech2-kss-ko")
 # initialize mb_melgan model
