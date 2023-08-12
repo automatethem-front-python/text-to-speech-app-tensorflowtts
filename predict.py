@@ -59,7 +59,7 @@ def test_to_speech_break(text, save_file):
         if not p:
             combined += pause2s
         else:
-            tmpFileName = "predict_inputs/tmp"+str(cnt)+".mp3"
+            tmpFileName = "predict_inputs/tmp"+str(cnt)+".wav"
             text_to_speech(p, tmpFileName)
             combined+=AudioSegment.from_mp3(tmpFileName) 
         cnt+=1     
