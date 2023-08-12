@@ -51,13 +51,13 @@ def text_to_speech(text, save_file):
 def test_to_speech_break(text, save_file):
     #contents = "Hello with <break><break> 1 seconds pause"
     parts = text.split("<break>") # I have chosen this symbol for the pause.
-    pause2s = AudioSegment.from_mp3("predict_inputs/pause_05second.mp3") 
+    pause1s = AudioSegment.from_mp3("predict_inputs/pause_1second.mp3") 
     cnt = 0
     combined = AudioSegment.empty()
     for p in parts:
         # The pause will happen for the empty element of the list
         if not p:
-            combined += pause2s
+            combined += pause1s
         else:
             tmpFileName = "predict_inputs/tmp"+str(cnt)+".wav"
             text_to_speech(p, tmpFileName)
