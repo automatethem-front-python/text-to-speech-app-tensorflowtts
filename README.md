@@ -38,7 +38,7 @@ pip install -r requirements_reinstall.txt --upgrade --force-reinstall
 python predict.py
 ```
 
-참고)
+참고) 무음 mp3 만들기
 ```
 #create-a-silent-mp3-from-the-command-line
 #https://stackoverflow.com/questions/5276253/create-a-silent-mp3-from-the-command-line
