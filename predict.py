@@ -7,28 +7,39 @@ from tensorflow_tts.inference import AutoProcessor
 import python_supporter
 import random
 from pydub import AudioSegment
+from langdetect import detect
 
 import nltk
 nltk.download('punkt')
 
-'''
-# initialize fastspeech2 model.
-fastspeech2 = TFAutoModel.from_pretrained("tensorspeech/tts-fastspeech2-ljspeech-en")
-# initialize mb_melgan model
-mb_melgan = TFAutoModel.from_pretrained("tensorspeech/tts-mb_melgan-ljspeech-en")
-# inference
-processor = AutoProcessor.from_pretrained("tensorspeech/tts-fastspeech2-ljspeech-en")
-'''
 #'''
 # initialize fastspeech2 model.
-fastspeech2 = TFAutoModel.from_pretrained("tensorspeech/tts-fastspeech2-kss-ko")
+fastspeech2_en = TFAutoModel.from_pretrained("tensorspeech/tts-fastspeech2-ljspeech-en")
 # initialize mb_melgan model
-mb_melgan = TFAutoModel.from_pretrained("tensorspeech/tts-mb_melgan-kss-ko")
+mb_melgan_en = TFAutoModel.from_pretrained("tensorspeech/tts-mb_melgan-ljspeech-en")
 # inference
-processor = AutoProcessor.from_pretrained("tensorspeech/tts-fastspeech2-kss-ko")
+processor_en = AutoProcessor.from_pretrained("tensorspeech/tts-fastspeech2-ljspeech-en")
+#'''
+#'''
+# initialize fastspeech2 model.
+fastspeech2_ko = TFAutoModel.from_pretrained("tensorspeech/tts-fastspeech2-kss-ko")
+# initialize mb_melgan model
+mb_melgan_ko = TFAutoModel.from_pretrained("tensorspeech/tts-mb_melgan-kss-ko")
+# inference
+processor_ko = AutoProcessor.from_pretrained("tensorspeech/tts-fastspeech2-kss-ko")
 #'''
 
 def text_to_speech(text, save_file):
+    detected = detect(text)
+    if detected == "ko":
+        fastspeech2 = fastspeech2_ko
+        mb_melgan = mb_melgan_ko
+        processor = processor_ko
+    else:
+        fastspeech2 = fastspeech2_en
+        mb_melgan = mb_melgan_en
+        processor = processor_en
+        
     input_ids = processor.text_to_sequence(text)
 
     # fastspeech inference
