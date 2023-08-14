@@ -47,6 +47,10 @@ ffmpeg -f lavfi -i anullsrc=r=44100:cl=mono -t 0.5 -q:a 9 -acodec libmp3lame pau
 ffmpeg -f lavfi -i anullsrc=r=44100:cl=mono -t 1 -q:a 9 -acodec libmp3lame pause_1second.mp3
 ```
 
+참고) 언어
+
+https://jiyeonseo.github.io/2020/10/13/py-lang-detection/
+
 참고 자료)
 
 You’re able to add commas that will add a “natural pause” in the speech.  
