@@ -6,3 +6,4 @@ TensorFlowTTS
 git+https://github.com/repodiac/german_transliterate
 pydub
 python-supporter
+langdetect
