@@ -63,7 +63,8 @@ def text_to_speech(text, save_file):
 #pydub-concatenate-mp3-in-a-directory
 #https://stackoverflow.com/questions/26363558/pydub-concatenate-mp3-in-a-directory
 def test_to_speech_break(text, save_file):
-    #contents = "Hello with <break><break> 1 seconds pause"
+    #text = "Hello with <break><break> 1 seconds pause"
+    #print(text)
     parts = text.split("<break>") # I have chosen this symbol for the pause.
     #print(parts)
     temp = []
@@ -98,4 +99,7 @@ if __name__ == "__main__":
     #text = "Hello with <break><break> 2 seconds pause"
     #text = "안녕하세요 <break><break> 반갑습니다"
     text = python_supporter.file.read_file("predict_inputs/inputs.txt")
+    #python에서 \ufeff가 읽힐 때 해결방법
+    #https://frhyme.github.io/python-basic/py_eff_byte_order_mark/
+    text = text.replace("\ufeff", "")
     test_to_speech_break(text, "predict_outputs/outputs.mp3")
